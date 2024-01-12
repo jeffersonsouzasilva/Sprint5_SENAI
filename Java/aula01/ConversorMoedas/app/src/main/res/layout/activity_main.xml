@@ -16,22 +16,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/txt_titulo"
                 android:fontFamily="sans-serif-black"
-                android:textColor="#5B0EE4" android:textSize="16sp" app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/input_valor"/>
+                android:textColor="#5B0EE4" android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:ems="10"
-                android:id="@+id/input_valor" tools:layout_editor_absoluteY="309dp"
-                tools:layout_editor_absoluteX="100dp"/>
+                android:id="@+id/input_valor"
+                app:layout_constraintBottom_toTopOf="@+id/radio_opcoes" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/txt_titulo"/>
         <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/input_valor"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                android:id="@+id/radio_opcoes" android:layout_marginTop="32dp">
+                android:id="@+id/radio_opcoes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/txt_resultado"
+                app:layout_constraintBottom_toTopOf="@+id/btn_converter">
             <RadioButton
                     android:text="CLP"
                     android:layout_width="wrap_content"
@@ -52,14 +54,13 @@
                 android:text="CONVERTER"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/btn_converter"
-                app:layout_constraintTop_toBottomOf="@+id/radio_opcoes"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
         <TextView
                 android:text="TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/txt_resultado"
-                tools:layout_editor_absoluteY="243dp"
+                tools:layout_editor_absoluteY="130dp"
                 tools:layout_editor_absoluteX="176dp" android:visibility="invisible"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
