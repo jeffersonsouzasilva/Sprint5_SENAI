@@ -1,0 +1,25 @@
+1. Declaração dos elementos
+	1. TextView nome FindViewById(R.id.elementos)
+
+	
+2. Estrutura do calculo
+	imc = peso / (altura * altura)
+
+3. Estrutura do If Else
+	if(imc < 18.5){
+	  return "Filezinho!!!";
+
+	}else if(imc < 25){
+	  return "Diliça!!!"	
+
+	}else if(imc < 30){
+	  return "Ta Top!!!"
+	  
+	}else{
+	  return "Oh la em casa!!!"
+
+	}
+     }
+
+4. Exibir resultado do calculo
+5. Exibir classificação
