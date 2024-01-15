@@ -1,6 +1,8 @@
 package com.example.calculoimc;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +18,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView resultado;
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
@@ -27,7 +30,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
     //COMECA AQUI O CODIGO
+    resultado = findViewById(R.id.resultado_Calculo);
 
+    Button botaoCalcular = findViewById(R.id.btn_Calcular);
+
+    botaoCalcular.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            calcular();
+
+        }
+
+        private void calcular(){
+
+        }
+    });
 
     }
 }
