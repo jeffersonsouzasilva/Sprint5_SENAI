@@ -1,4 +1,4 @@
-package com.example.vsconnect_kotlin
+package com.example.vsconnect_kotlin.models
 
 import java.util.UUID
 
