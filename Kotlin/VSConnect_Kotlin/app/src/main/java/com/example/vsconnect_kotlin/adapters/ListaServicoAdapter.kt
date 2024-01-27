@@ -1,6 +1,7 @@
 package com.example.vsconnect_kotlin.adapters
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +12,7 @@ import com.example.vsconnect_kotlin.models.Servico
 
 class ListaServicoAdapter (
     private val context: Context,
-    private  val ListaServicos: List<Servico>
+    private  val listaServicos: List<Servico>
 ): RecyclerView.Adapter<ListaServicoAdapter.ViewHolder>(){
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -32,14 +33,20 @@ class ListaServicoAdapter (
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListaServicoAdapter.ViewHolder {
-        TODO("Not yet implemented")
+        val inflater = LayoutInflater.from(context)
+
+        val view = inflater.inflate(R.layout.fragment_servico, parent,false)
+
+        return  ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ListaServicoAdapter.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val itemServico = listaServicos[position]
+
+        holder.vincularDadosNoItem(itemServico)
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return listaServicos.size
     }
 }
