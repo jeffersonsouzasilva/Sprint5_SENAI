@@ -1,5 +1,8 @@
 CREATE DATABASE bd_vsconnect;
 
+DROP DATABASE bd_vsconnect;
+
+
 /*Usa o banco de dados selecionado*/
 USE bd_vsconnect;
 
